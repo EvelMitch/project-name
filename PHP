@@ -1,0 +1,15 @@
+function project_name_divi() {
+    register_post_type( 'project',
+        array(
+            'labels' => array(
+            'name' => __( 'Themes', 'divi' ),
+            'singular_name' => __( 'Themes', 'divi' ),
+        ),
+        'has_archive' => true,
+        'hierarchical' => true,
+        'public' => true,
+        'rewrite' => array( 'slug' => 'themes', 'with_front' => false ),
+        'supports' => array(),
+    ));
+}
+add_action( 'init', 'project_name_divi' );
